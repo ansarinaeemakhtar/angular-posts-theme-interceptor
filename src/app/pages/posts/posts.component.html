@@ -1,0 +1,16 @@
+<div class="container" style="display: flex; flex-direction: column; flex-wrap: nowrap; width: 50%; margin: 3rem auto; border: 1px solid #333; padding: 1rem; background-color: var(--background-light); color: var(--foreground-tertiary)">
+    <div class="item">
+        <ul class="ul" style="padding: 0; margin: 0 auto;">
+            <li style="margin: 5px; padding: 3px; border-bottom: 1px dotted #CCC; list-style: none;" *ngFor="let post of posts">
+                <h3 style="font-weight: bold;">{{post.title}}</h3>
+                <p>{{post.body}}</p>
+
+                <div style="justify-content: end; min-width: 30px; height: 30px; line-height: 30px; text-align: right; margin-bottom: 5px; margin-left: auto; cursor: pointer; font-style: italic;">
+                    <a style="text-decoration: none; font-weight: bold; color: var(--primary-default);" routerLink="/user/{{post.userId}}">
+                        <app-username [userid]="post.userId"></app-username>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

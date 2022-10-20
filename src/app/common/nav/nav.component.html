@@ -1,0 +1,5 @@
+<div class="loader-container" *ngIf="_loader.isLoading | async"><mat-progress-bar mode="indeterminate"></mat-progress-bar></div>
+<header style="width: 100%; padding: 5px; text-align: center; margin: 15px auto 25px;">
+    <button type="button" style="padding: 5px 10px; text-align: center; font-size: 14px; background: #FFF; border: 1px solid #000; width: 150px; margin: auto; cursor: pointer;" (click)="toggleTheme()">
+Change theme</button>
+</header>
